@@ -1,16 +1,21 @@
-#ifndef vektor
-#define vektor
+#pragma once
+#ifndef vektor_v
+#define vektor_v
 
-#include <cstddef>
-#include <iostream>
+struct vektor {
 
-struct vektor{
-	int *niz;
+	int* niz;
 	int logickaVelicina;
 	int fizickaVelicina;
+
 };
 
-
-
+void vector_new(vektor& v,int Vrijednost);
+void vector_delete(vektor& v);
+void vector_push_back(vektor& v,int Vrijednost);
+void vector_pop_back(vektor& v);
+int vector_front(vektor& v);
+int vector_back(vektor& v);
+int vector_size(vektor& v);
 
 #endif
